@@ -27,7 +27,7 @@ class ListsController < ApplicationController
 
     if list.update(id: params[:id], title: params[:title])
       render json: list.to_json, status: 200
-    elserender json: order.errors.to_json, status: :unprocessable_entity
+    else render json: order.errors.to_json, status: :unprocessable_entity
     end
   end
 

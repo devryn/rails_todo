@@ -13,5 +13,26 @@ What has been added to the ToDo app:
 
 4. Two migration files that define the parameters of the Task and List tables.
 
+Features:
+1. Add a List
+  - Using Postman, POST localhost:3000/lists will allow you to add a new list. You must fill in the Title, or an error will be thrown:  "is too short (minimum is 2 characters)"
+2. Add a Task
+  -  Using Postman, POST localhost:3000/tasks will allow you to add a new task. You must fill in the Body, List ID, and whether it has been completed or it will cause an error.
+3. All lists
+  - GET localhost:3000/lists will show all lists in the database.
+4. All tasks
+  - GET localhost:3000/tasks will show all tasks in the database.
+5. One list
+  - GET localhost:3000/lists/1 will first look for the a list with the ID of 1, and if it exists, will show the list with the ID of 1, and so on for all existing lists. When searching for an ID that has not been assigned yet, you will see "List not found."
+6. One task
+  - GET localhost:3000/tasks/1 will first look for the a task with the ID of 1, and if it exists, show the task with the ID of 1, and so on for all existing tasks. When searching for an ID that has not been assigned yet, you will see "Task not found."
+7. Edit a list
+  - PUT localhost:3000/lists/8 will allow you to update the title of the list with ID 8. Once sent, the page will redirect to showing that one list with ID and title.
+8. Edit a task
+  - PUT localhost:3000/tasks/8 will allow you to fill in the column you'd like to update - you can update just one or as many as needed. Once sent, the page will redirect to showing that one task with ID, body, list ID, and completed status.
+9. Delete a list
+  - DELETE localhost:3000/lists/2 will delete the list with ID of 2. Once complete, you will see the message "List destroyed."
+10. Delete a task
+  - DELETE localhost:3000/tasks/2 will delete the task with ID of 2. Once complete, you will see the message "Task destroyed."
 
 # rails_todo
