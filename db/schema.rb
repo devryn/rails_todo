@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160708192215) do
   create_table "tasks", force: :cascade do |t|
     t.text    "body"
     t.integer "list_id"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.index ["list_id"], name: "index_tasks_on_list_id"
   end
 
